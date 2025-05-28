@@ -1,0 +1,119 @@
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        position: relative;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 10;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 80px 30px;
+        transition: right 0.3s ease-in-out;
+        z-index: 5;
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 15px 0;
+    }
+    
+    .logo {
+        z-index: 10;
+    }
+}
+
+/* Hero Section */
+@media screen and (max-width: 992px) {
+    #hero {
+        flex-direction: column;
+        padding: 60px 20px;
+        text-align: center;
+    }
+    
+    .hero-text {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .hero-image {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+/* About Section */
+@media screen and (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Experience Section */
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    
+    .timeline-icon {
+        margin-bottom: 15px;
+    }
+    
+    .timeline-content {
+        width: 100%;
+    }
+}
+
+/* Projects Section */
+@media screen and (max-width: 992px) {
+    .portfolio-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .portfolio-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* General Section Padding */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 60px 20px;
+    }
+    
+    h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+}
+
+/* Back to Top Button */
+@media screen and (max-width: 576px) {
+    #back-to-top {
+        right: 15px;
+        bottom: 15px;
+    }
+}
