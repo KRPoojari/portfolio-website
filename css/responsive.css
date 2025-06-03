@@ -1,119 +1,163 @@
-/* Mobile Navigation */
+/* Tablet (≤1024px) */
+@media screen and (max-width: 1024px) {
+  #about,
+  #experience,
+  #education,
+  #projects,
+  #blog,
+  #contact {
+    padding: 2rem 2rem;
+  }
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .education-year {
+    margin-bottom: 0.5rem;
+  }
+  .portfolio-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile (≤768px) */
 @media screen and (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-        position: relative;
-    }
-    
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        z-index: 10;
-    }
-    
-    nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background-color: #fff;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        padding: 80px 30px;
-        transition: right 0.3s ease-in-out;
-        z-index: 5;
-    }
-    
-    nav.active {
-        right: 0;
-    }
-    
-    nav ul {
-        flex-direction: column;
-    }
-    
-    nav ul li {
-        margin: 15px 0;
-    }
-    
-    .logo {
-        z-index: 10;
-    }
+  header {
+    padding: 1rem;
+  }
+  nav {
+    width: 80vw;
+    padding-top: 80px;
+    background: #18191b;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure nav is above the overlay */
+  }
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul li {
+    margin: 1.5rem 0;
+  }
+  .logo {
+    z-index: 10;
+  }
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem 0 1rem;
+    gap: 2rem;
+  }
+  .hero-text {
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+    max-width: 80vw;
+  }
+  #about,
+  #experience,
+  #education,
+  #projects,
+  #blog,
+  #contact {
+    padding: 2rem 1rem;
+  }
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .timeline-item {
+    padding-left: 4rem;
+  }
+  .timeline-icon {
+    left: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .timeline-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  .portfolio-items {
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding: 2rem 1rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
-/* Hero Section */
-@media screen and (max-width: 992px) {
-    #hero {
-        flex-direction: column;
-        padding: 60px 20px;
-        text-align: center;
-    }
-    
-    .hero-text {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-    
-    .hero-image {
-        width: 80%;
-        max-width: 300px;
-    }
-}
-
-/* About Section */
-@media screen and (max-width: 768px) {
-    .image-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-}
-
-/* Experience Section */
-@media screen and (max-width: 768px) {
-    .timeline-item {
-        flex-direction: column;
-        padding: 0 15px;
-    }
-    
-    .timeline-icon {
-        margin-bottom: 15px;
-    }
-    
-    .timeline-content {
-        width: 100%;
-    }
-}
-
-/* Projects Section */
-@media screen and (max-width: 992px) {
-    .portfolio-items {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-
+/* Small Mobile (≤576px) */
 @media screen and (max-width: 576px) {
-    .portfolio-items {
-        grid-template-columns: 1fr;
-    }
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-items {
+    grid-template-columns: 1fr;
+  }
+  #back-to-top {
+    right: 10px;
+    bottom: 10px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  section {
+    padding: 1.5rem 0.5rem;
+  }
+  .hero-image img {
+    width: 120px;
+    height: 120px;
+  }
 }
 
-/* General Section Padding */
-@media screen and (max-width: 768px) {
-    section {
-        padding: 60px 20px;
-    }
-    
-    h2 {
-        font-size: 28px;
-        margin-bottom: 30px;
-    }
-}
-
-/* Back to Top Button */
-@media screen and (max-width: 576px) {
-    #back-to-top {
-        right: 15px;
-        bottom: 15px;
-    }
+/* Extra Small (≤480px) */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0.5rem;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text h2 {
+    font-size: 1.2rem;
+  }
+  .hero-image img {
+    width: 90px;
+    height: 90px;
+  }
+  .btn,
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .social-icon {
+    font-size: 1rem;
+  }
+  .timeline-item {
+    padding-left: 2.5rem;
+  }
+  .timeline-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .timeline-icon img {
+    width: 18px;
+    height: 18px;
+  }
+  .education-card {
+    padding: 1rem;
+  }
+  .coming-soon-box {
+    padding: 1rem;
+  }
+  footer {
+    padding: 10px 0;
+  }
 }
